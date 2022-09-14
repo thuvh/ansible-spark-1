@@ -41,7 +41,7 @@
 - name: include spark in the default path...
   become: yes
   become_user: root
-  with_items:
+  loop:
     - f: spark.sh
       d: /etc/profile.d
       m: '0644'
